@@ -2,7 +2,7 @@
 <html ng-app="app">
 
 <head>
-	<title>Cuaderno Alumnos</title>
+	<title>Cuaderno Alumnos en Apache</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 <body>
 	<div ng-controller="AlumnosController">
 
-		<h1>Cuaderno Alumnos </h1>
+		<h1>Cuaderno Alumnos en Apache</h1>
 		<div class="wrapper">
 			<div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombre'">
 				<div class="nombre"> {{alumno.nombre}} {{alumno.telefono}} </div>
