@@ -12,7 +12,7 @@
 <body>
 	<div ng-controller="AlumnosController">
 
-		<h1>Cuaderno Alumnos en Apache</h1>
+		<h1>Cuaderno Alumnos en Apache 2</h1>
 		<div class="wrapper">
 			<div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombre'">
 				<div class="nombre"> {{alumno.nombre}} {{alumno.telefono}} </div>
@@ -22,16 +22,23 @@
 
 
 		<br>
-		<div class="wrapper">
+
+		<center><button ng-click="ShowForm()" ng-hide="formVisibility"> Añadir Contacto</button></center>
+
+
+		<div ng-show="formVisibility" class="wrapper" align="center">
 			<h2>Anadir un Contacto</h2>
-			Nombre :<input type="text" ng-model="nuevoAlumno.nombre"></input>
-			Telefono :<input type="text" ng-model="nuevoAlumno.telefono"></input>
-			Curso : <input type="text" ng-model="nuevoAlumno.curso"></input>
+			<div class="nombre">Nombre :<input type="text" ng-model="nuevoAlumno.nombre"></input>
+			</div> <br>
+			<div class="nombre">Telefono :<input type="text" ng-model="nuevoAlumno.telefono"></input>
+			</div> <br>
+			<div class="nombre">Curso : <input type="text" ng-model="nuevoAlumno.curso"></input>
+			</div> <br>
 			<button ng-click="Save()">Guardar</button>
 
 
-
 		</div>
+
 	</div>
 
 	<script type="text/javascript" src="lib/angular.min.js"></script>
